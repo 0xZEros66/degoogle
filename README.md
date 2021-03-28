@@ -1,7 +1,7 @@
 # Dorky
 
 ```
-git clone
+git clone https://github.com/Raywando/degoogle
 cd degoogle
 pip install .
 ln dorky /usr/bin/
