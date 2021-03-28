@@ -1,0 +1,11 @@
+#!/bin/bash
+
+domain=$1
+
+dorks=("filetype:xls" "filetype:xlsx" "filetype:mdb" "filetype:sql" "filetype:txt" "filetype:csv" "filetype:xml" "filetype:conf" "filetype:dat" "filetype:ini" "filetype:log" "index%20of:id_rsa%20id_rsa.pub" "intitle:%22index%20of%22%20%22parent%20directory%22" "intitle:%22index%20of%22%20%22DCIM%22" "intitle:%22index%20of%22%20%22ftp%22" "intitle:%22index%20of%22%20%22backup%22" "intitle:%22index%20of%22%20%22mail%22" "intitle:%22index%20of%22%20%22password%22" "intitle:%22index%20of%22%20%22pub%22" "intitle:%22index%20of%22")
+
+for dork in "${dorks[@]}"
+do
+        echo "[+] Dork: $(urlencode -d $dork)"
+        python3 degoogle.py "site:$domain $dork"
+done
