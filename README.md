@@ -1,4 +1,4 @@
-# degoogle
+# Dorky
 
 ```
 git clone
@@ -9,4 +9,4 @@ ln dorky /usr/bin/
 
 # Usage
 
-
+dorky target.com
