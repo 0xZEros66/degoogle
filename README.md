@@ -9,4 +9,4 @@ ln dorky /usr/bin/
 
 # Usage
 
-dorky target.com
+`dorky target.com`
