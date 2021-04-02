@@ -7,5 +7,5 @@ dorks=("filetype:xls" "filetype:xlsx" "filetype:mdb" "filetype:sql" "filetype:tx
 for dork in "${dorks[@]}"
 do
         echo "[+] Dork: $(urlencode -d $dork)"
-        python3 degoogle.py "site:$domain $dork"
+        python3 degoogle/degoogle.py "site:$domain $dork"
 done
